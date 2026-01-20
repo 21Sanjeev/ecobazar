@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Medium.ttf") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Bold.ttf") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --primary-color: #00B207;
+  --success-dark: #2C742F;
+  --gray-400: #999999;
+  --gray-600: #666666;
+  --gray-800: #333333;
+}
+
+@layer base {
+  html {
+    font-family: Poppins, ui-sans-serif, system-ui;
+  }
+}
+
+@layer component {
+  .app-container {
+    @apply mx-auto max-w-[1440px] px-3;
+  }
+}
+
+@layer component {
+  .count-rounded {
+    @apply absolute w-[18px] h-[18px] bg-(--success-dark) text-white text-[10px] font-semibold rounded-full flex justify-center items-center top-0 right-[-4px] border border-white;
+  }
+}
+
+.menu-active {
+  @apply text-white;
+}
