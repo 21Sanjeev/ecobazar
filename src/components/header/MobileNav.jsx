@@ -1,3 +1,4 @@
+import Button from "../button/Button";
 import MenuItem from "./MenuItem";
 
 function MobileNav({ open, onClose, closeIcon, searchIcon }) {
@@ -34,9 +35,7 @@ function MobileNav({ open, onClose, closeIcon, searchIcon }) {
           {/* Search */}
           <form className="flex relative max-w-full mt-6">
             <input type="text" placeholder="Search" className="border border-neutral-200 border-r-0 block outline-0 focus:border-(--primary-color) rounded-s-md w-full p-3 text-sm" />
-            <button type="submit" className="bg-[var(--primary-color)] px-4 text-white" >
-              <img src={searchIcon} alt="search icon" className="filter brightness-0 invert" width="24" height="24" />
-            </button>
+            <Button type='submit' className='primaryBtn px-3 h-auto text-sm rounded-e-md cursor-pointer lg:px-4 min-w-0' aria-label ='Click here to search' btnIcon={searchIcon}></Button>
           </form>
 
           {/* Navigation */}

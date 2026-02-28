@@ -6,6 +6,7 @@ import closeIcon from '../../assets/icons/close.svg';
 import hamburgerIcon from '../../assets/icons/menu.svg';
 import MenuItem from "./MenuItem";
 import MobileNav from "./MobileNav";
+import Button from "../button/Button";
 
 function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,7 +47,7 @@ function Header() {
                 <form className="hidden md:flex relative max-w-[320px] lg:max-w-full">
                     <img src={searchIcon} alt="search icon" className='absolute left-2 top-[50%] translate-y-[-50%]' />
                     <input type="text" className='border border-neutral-200 border-r-0 block py-2 px-4 pl-8 outline-0 focus:border-(--primary-color) rounded-s-md w-full lg:py-3 text-sm' placeholder='Search' />
-                    <button type='submit' className='block h-auto border border-(--primary-color) text-white px-3 bg-(--primary-color) text-sm rounded-e-md cursor-pointer hover:bg-transparent hover:text-(--primary-color) lg:px-4'>Search</button>
+                    <Button type='submit' className='primaryBtn px-3 h-auto text-sm rounded-e-md cursor-pointer lg:px-4 min-w-0' btnText ='Search'></Button>
                 </form>
                 <div className="hidden lg:flex items-center gap-3">
                     <a href="#" className='relative'>
@@ -131,7 +132,10 @@ function Header() {
                     </a>
                 </div>
             </div>
-            <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} closeIcon={closeIcon} searchIcon={searchIcon} />
+            <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} closeIcon={closeIcon} searchIcon={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M17.4999 17.5L13.8749 13.875" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>} />
         </header>
     );
 }

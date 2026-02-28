@@ -61,3 +61,9 @@
 .menu-active {
   @apply text-white;
 }
+.primaryBtn {
+  @apply bg-linear-30 from-50% from-(--primary-color) to-50% to-transparent bg-size-[500px] text-white flex gap-3 justify-center items-center transition-all duration-300 hover:text-(--primary-color) hover:bg-position-[100%] bg-no-repeat border border-(--primary-color);
+}
+.whiteFill {
+  @apply from-white text-(--primary-color) border-white hover:text-white;
+}
